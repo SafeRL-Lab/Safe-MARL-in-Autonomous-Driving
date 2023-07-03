@@ -1,0 +1,10 @@
+{
+    "scenario_name": "roundabout-v0",
+    "file_path" : "./roundabout_env_result/exp3_base",
+    "save_dir" : "./roundabout_env_result/exp3_base",
+    "enable_cost" : true,
+    "action_type": "discrete",
+    "cost_threshold": 100,
+    "batch_size" : 64,
+    "time_steps" : 10000
+}

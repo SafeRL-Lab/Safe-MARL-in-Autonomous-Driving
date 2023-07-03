@@ -1,0 +1,11 @@
+{
+    "scenario_name" : "intersection-v1",
+    "file_path" : "./intersection_env_result/exp16",
+    "save_dir" : "./intersection_env_result/exp16",
+    "version" : "C-bilevel",
+    "lagrangian_multiplier" : 0,
+    "cost_threshold" : 1,
+    "min_noise_rate" : 0.01,
+    "min_epsilon" : 0.01,
+    "time_steps" : 20000
+}

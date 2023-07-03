@@ -1,0 +1,34 @@
+{
+    "controlled_vehicles": 2,
+    "initial_vehicle_count" : 0,
+    "spawn_probability": 0,
+    "real_time_rendering": true,
+    "observation": {
+        "type": "MultiAgentObservation",
+        "observation_config": {
+            "type": "Kinematics",
+            "flatten": true,
+            "absolute": true,
+            "see_behind": true,
+            "normalize": false,
+            "features": ["x", "y", "vx", "vy"],
+            "vehicles_count": 2
+            }
+    },
+    "action": {
+        "type": "MultiAgentAction",
+        "action_config": {
+            "type": "ContinuousAction",  
+            "longitudinal": true,
+            "lateral": false
+            }
+    },
+    "duration": 20,
+    "arrived_reward": 10,
+    "collision_reward": -10,
+    "high_speed_reward": 0,
+    "on_road_reward": 0,
+    "offroad_terminal": true,
+    "first_arrive_reward": 20,
+    "second_arrive_reward": 10
+    }

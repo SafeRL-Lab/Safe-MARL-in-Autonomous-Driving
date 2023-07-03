@@ -1,0 +1,12 @@
+{
+    "scenario_name" : "merge-v0",
+    "file_path" : "./merge_env_result/exp6/seed_1",
+    "save_dir" : "./merge_env_result/exp6/seed_1",
+    "action_type": "discrete",
+    "seed" : 1,
+    "cost_threshold" : 5,
+    "min_noise_rate" : 0,
+    "min_epsilon" : 0,
+    "batch_size" : 64,
+    "time_steps" : 20000
+}

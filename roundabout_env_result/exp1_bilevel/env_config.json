@@ -1,0 +1,22 @@
+{
+    "duration": 20, 
+    "observation": {
+        "type": "MultiAgentObservation",
+            "observation_config": {
+                "type": "Kinematics",
+                "flatten": true,
+                "absolute": true,
+                "see_behind": true,
+                "normalize": false,
+                "features": ["x", "y", "vx", "vy"],
+                "vehicles_count": 2
+            }
+      },
+      "action": {
+        "type": "MultiAgentAction",
+            "action_config": {
+                "type": "DiscreteMetaAction",  
+                "target_speeds": [0, 4, 8, 12, 16]
+            }
+      }
+}

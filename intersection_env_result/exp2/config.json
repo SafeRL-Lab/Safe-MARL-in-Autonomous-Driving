@@ -1,0 +1,10 @@
+{
+    "scenario_name" : "intersection-v1",
+    "version" : "c_bilevel",
+    "lagrangian_multiplier" : 0,
+    "lagrangian_max_bound" : 100,
+    "cost_threshold" : 5,
+    "min_noise_rate" : 0,
+    "min_epsilon" : 0,
+    "time_steps" : 1000
+}

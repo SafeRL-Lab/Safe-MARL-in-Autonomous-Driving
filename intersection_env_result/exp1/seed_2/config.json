@@ -1,0 +1,13 @@
+{
+    "scenario_name" : "intersection-v1",
+    "file_path" : "./intersection_env_result/exp17/seed_4",
+    "save_dir" : "./intersection_env_result/exp17/seed_4",
+    "version" : "c_bilevel",
+    "seed" : 3,
+    "lagrangian_multiplier" : 0,
+    "lagrangian_max_bound" : 100,
+    "cost_threshold" : 4,
+    "min_noise_rate" : 0,
+    "min_epsilon" : 0,
+    "time_steps" : 20000
+}

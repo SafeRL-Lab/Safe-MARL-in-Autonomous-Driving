@@ -1,0 +1,10 @@
+{
+    "scenario_name": "roundabout-v0",
+    "enable_cost" : true,
+    "action_type": "discrete",
+    "cost_threshold" : 5,
+    "min_noise_rate" : 0,
+    "min_epsilon" : 0,
+    "batch_size" : 64,
+    "time_steps" : 10000
+}

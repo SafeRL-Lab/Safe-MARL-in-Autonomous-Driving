@@ -1,0 +1,10 @@
+{
+    "scenario_name" : "racetrack-v0",
+    "version": "c_bilevel",
+    "lagrangian_multiplier" : 0,
+    "lagrangian_max_bound" : 100,
+    "cost_threshold" : 1,
+    "min_noise_rate" : 0,
+    "min_epsilon" : 0,
+    "time_steps" : 500000
+}

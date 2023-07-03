@@ -1,0 +1,7 @@
+{
+    "scenario_name" : "intersection-v1",
+    "file_path" : "./intersection_env_result/exp2_base",
+    "save_dir" : "./intersection_env_result/exp2_base",
+    "version" : "bilevel",
+    "time_steps" : 20000
+}

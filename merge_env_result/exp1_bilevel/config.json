@@ -1,0 +1,7 @@
+{
+    "scenario_name" : "merge-v0",
+    "action_type": "discrete",
+    "cost_threshold": 100,
+    "batch_size" : 64,
+    "time_steps" : 20000
+}

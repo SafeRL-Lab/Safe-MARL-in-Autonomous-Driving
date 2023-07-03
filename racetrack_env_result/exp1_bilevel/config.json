@@ -1,0 +1,5 @@
+{
+    "scenario_name" : "racetrack-v0",
+    "version": "bilevel",
+    "time_steps" : 500000
+}
