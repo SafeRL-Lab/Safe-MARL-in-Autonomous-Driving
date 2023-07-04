@@ -1,6 +1,6 @@
 # Constrained Stackelberg Q-learning and MADDPG
 
-This is a pytorch implementation of Constrained Stackelberg Q-learning and Constrained Stackelberg MADDPG
+This is a pytorch implementation of Constrained Stackelberg Q-learning(discrete action) and Constrained Stackelberg MADDPG(continuous action). These algorithms are proposed by incorporating the Stackelberg model into Deep Q-learning and MADDPG, and leveraging the Lagrangian multiplier method to deal with the safety constraints. The highway environments used in our experiments are modified from [highway-env](https://github.com/Farama-Foundation/HighwayEnv).
 
 ## 1. Installation
 
@@ -12,6 +12,10 @@ pip install -r requirements.txt
 ```
 
 ## 2. Quick Start
+- create experiment folder, for example, ./merge_env_result/exp2
+- define train config in ./merge_env_result/exp2/config.py
+- define env config in ./merge_env_result/exp2/env_config.py
+- start training by running the following command
 
 ```shell
 python main_bilevel.py --file-path ./merge_env_result/exp2

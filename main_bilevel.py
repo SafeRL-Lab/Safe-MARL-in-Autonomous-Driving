@@ -17,9 +17,11 @@ if __name__ == '__main__':
     # args.file_path = "./racetrack_env_result/exp1"
 
     seed = [0,1,2]
+
     for i in seed:
         args.seed = i
         args.save_dir = args.file_path + "/seed_" + str(args.seed)
+
         if not os.path.exists(args.save_dir):
             os.mkdir(args.save_dir)
         with open(args.file_path+'/config.json','r') as f:

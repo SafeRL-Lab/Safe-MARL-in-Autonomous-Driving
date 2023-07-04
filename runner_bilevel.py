@@ -111,7 +111,7 @@ class Runner_C_Bilevel:
                 np.save(self.save_path + '/leader_arrive_record.npy', self.leader_arrive_record)
                 np.save(self.save_path + '/follower_arrive_record.npy', self.follower_arrive_record)
                 np.save(self.save_path + '/crash_record.npy', self.crash_record)
-                returns.append(self.evaluate())
+                self.evaluate()
             self.noise = max(self.min_noise, self.noise - 0.0000005)
             self.epsilon = max(self.min_epsilon, self.epsilon - 0.0000005)
             
@@ -125,16 +125,16 @@ class Runner_C_Bilevel:
         returns = []
         for episode in range(self.args.evaluate_episodes):
             # reset the environment
-            s, info = self.env.reset()
+            s, info = self.eval_env.reset()
             s = np.array(s).reshape((2, 8))
             rewards = [0, 0]
             for time_step in range(self.args.evaluate_episode_len):
-                self.env.render()
+                self.eval_env.render()
                 with torch.no_grad():
-                    leader_action = self.leader_agent.select_action(s[0], 0, 0)
-                    follower_action = self.follower_agent.select_action(s[1], leader_action, 0, 0)
+                    leader_action = self.leader_agent.select_action(s[0], self.noise, self.epsilon)
+                    follower_action = self.follower_agent.select_action(s[1], leader_action, self.noise, self.epsilon)
                 actions = tuple([leader_action, follower_action])
-                s_next, r, done, truncated_n, info = self.env.step(actions)
+                s_next, r, done, truncated_n, info = self.eval_env.step(actions)
                 s_next = np.array(s_next).reshape((2, 8))
                 rewards[0] += r[0]
                 rewards[1] += r[1]
@@ -173,6 +173,8 @@ class Runner_Bilevel:
         self.args = args
         self.noise = args.noise_rate
         self.epsilon = args.epsilon
+        self.min_noise = args.min_noise_rate
+        self.min_epsilon = args.min_epsilon
         self.episode_limit = args.max_episode_len
         self.env = env
         self.eval_env = eval_env
@@ -257,8 +259,8 @@ class Runner_Bilevel:
                 np.save(self.save_path + '/leader_arrive_record.npy', self.leader_arrive_record)
                 np.save(self.save_path + '/follower_arrive_record.npy', self.follower_arrive_record)
                 np.save(self.save_path + '/crash_record.npy', self.crash_record)
-            self.noise = max(0.05, self.noise - 0.0000005)
-            self.epsilon = max(0.05, self.epsilon - 0.0000005)
+            self.noise = max(self.min_noise, self.noise - 0.0000005)
+            self.epsilon = max(self.min_epsilon, self.epsilon - 0.0000005)
         # save data
         np.save(self.save_path + '/reward_record.npy', self.reward_record)
         np.save(self.save_path + '/leader_arrive_record.npy', self.leader_arrive_record)
@@ -269,16 +271,16 @@ class Runner_Bilevel:
         returns = []
         for episode in range(self.args.evaluate_episodes):
             # reset the environment
-            s, info = self.env.reset()
+            s, info = self.eval_env.reset()
             s = np.array(s).reshape((2, 8))
             rewards = [0, 0]
             for time_step in range(self.args.evaluate_episode_len):
-                self.env.render()
+                self.eval_env.render()
                 with torch.no_grad():
-                    leader_action = self.leader_agent.select_action(s[0], 0, 0)
-                    follower_action = self.follower_agent.select_action(s[1], leader_action, 0, 0)
+                    leader_action = self.leader_agent.select_action(s[0], self.noise, self.epsilon)
+                    follower_action = self.follower_agent.select_action(s[1], leader_action, self.noise, self.epsilon)
                 actions = tuple([leader_action, follower_action])
-                s_next, r, done, truncated_n, info = self.env.step(actions)
+                s_next, r, done, truncated_n, info = self.eval_env.step(actions)
                 s_next = np.array(s_next).reshape((2, 8))
                 rewards[0] += r[0]
                 rewards[1] += r[1]
@@ -416,28 +418,25 @@ class Runner_Stochastic:
         returns = []
         for episode in range(self.args.evaluate_episodes):
             # reset the environment
-            step = 0
-            s, info = self.env.reset()
+            s, info = self.eval_env.reset()
             s = np.array(s).reshape((2, 8))
             rewards = [0, 0]
             for time_step in range(self.args.evaluate_episode_len):
-                step+=1
+                self.eval_env.render()
                 with torch.no_grad():
                     leader_action = self.leader_agent.select_action(s[0], self.noise, self.epsilon, self.cost_threshold)
                     follower_action = self.follower_agent.select_action(s[1], leader_action, self.noise, self.epsilon, self.cost_threshold)
                 actions = (leader_action, follower_action)
-                s_next, r, done, truncated_n, info = self.env.step(actions)
+                s_next, r, done, truncated_n, info = self.eval_env.step(actions)
                 s_next = np.array(s_next).reshape((2, 8))
                 rewards[0] += r[0]
                 rewards[1] += r[1]
-                self.env.render()
                 s = s_next
                 if np.all(done):
                     # print(info)
                     break
             returns.append(rewards)
             print('Returns is', rewards)
-            # print(step)
         return np.sum(returns, axis=0) / self.args.evaluate_episodes
     
     def add_target_action(self, transitions):
