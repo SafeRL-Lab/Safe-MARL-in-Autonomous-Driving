@@ -30,7 +30,7 @@ python main_bilevel.py --file-path ./merge_env_result/exp2
 ![Alt text](img/intersection_env/intersection_csmaddpg.gif)
 ### 3.4 Racetrack environment
 ![Alt text](img/racetrack_env/racetrack_csmaddpg.gif)
-## Note
+
 
 
 ## 4. Results
