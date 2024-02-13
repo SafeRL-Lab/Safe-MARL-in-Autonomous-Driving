@@ -30,6 +30,9 @@ python main_bilevel.py --file-path ./merge_env_result/exp2
 ![Alt text](img/intersection_env/intersection_csmaddpg.gif)
 ### 3.4 Racetrack environment
 ![Alt text](img/racetrack_env/racetrack_csmaddpg.gif)
+### 3.4 highway environment
+![Alt text](img/highway_env/highway_csmaddpg_1.gif)
+![Alt text](img/highway_env/highway_csmaddpg_2.gif)
 
 
 
@@ -75,18 +78,6 @@ python main_bilevel.py --file-path ./merge_env_result/exp2
 | ----------------------------------- | 
 | ![Alt text](img/highway_env/highway_result.png) | 
 
-## 4. Demos
-### 4.1 Merge environment
-![Alt text](img/merge_env/merge_csq.gif)
-### 4.2 Roundabout environment
-![Alt text](img/roundabout_env/roundabout_csq.gif)
-### 4.3 Intersection environment
-![Alt text](img/intersection_env/intersection_csmaddpg.gif)
-### 4.4 Racetrack environment
-![Alt text](img/racetrack_env/racetrack_csmaddpg.gif)
-### 4.4 highway environment
-![Alt text](img/highway_env/highway_csmaddpg_1.gif)
-![Alt text](img/highway_env/highway_csmaddpg_2.gif)
 ## Note
 
 
