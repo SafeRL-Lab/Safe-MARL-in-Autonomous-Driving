@@ -58,6 +58,10 @@ python main_bilevel.py --file-path ./merge_env_result/exp2
 | Training curve                       | 
 | ----------------------------------- | 
 |![Alt text](img/racetrack_env/crash_racetrack_sum.png) |
+### 3.5 Highway environment
+| Reward and Training curve                       | 
+| ----------------------------------- | 
+| ![Alt text](img/highway_env/highway_result.png) | 
 
 ## 4. Demos
 ### 4.1 Merge environment
@@ -68,6 +72,9 @@ python main_bilevel.py --file-path ./merge_env_result/exp2
 ![Alt text](img/intersection_env/intersection_csmaddpg.gif)
 ### 4.4 Racetrack environment
 ![Alt text](img/racetrack_env/racetrack_csmaddpg.gif)
+### 4.4 highway environment
+![Alt text](img/highway_env/highway_csmaddpg_1.gif)
+![Alt text](img/highway_env/highway_csmaddpg_2.gif)
 ## Note
 
 

@@ -1,0 +1,27 @@
+{ 
+    "render_mode": "rgb_array",
+    "controlled_vehicles": 2,
+    "vehicles_count": 3,
+    "screen_width": 1500,
+    "screen_height": 500,
+    "centering_position": [0.6, 0.6],
+    "duration": 40,
+    "observation": {
+        "type": "MultiAgentObservation",
+            "observation_config": {
+            "type": "Kinematics",
+            "flatten": true,
+            "absolute": true,
+            "see_behind": true,
+            "normalize": false,
+            "features": ["x", "y", "vx", "vy"],
+            "vehicles_count": 2
+            }
+    },
+    "action": {
+        "type": "MultiAgentAction",
+        "action_config": {
+            "type": "ContinuousAction"
+        }
+    }
+}

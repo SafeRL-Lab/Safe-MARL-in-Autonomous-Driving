@@ -61,7 +61,7 @@ class Runner_C_Bilevel:
                 # save first arrive record
                 if info is not None:
                     if self.args.scenario_name == "racetrack-v0":
-                        self.crash_record.append(info["crashed"])
+                        self.crash_record.append(info["crash"])
                     else:
                         if info["first_arrived"]==1:
                             self.leader_arrive_record.append(1)

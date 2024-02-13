@@ -21,7 +21,9 @@ def make_highway_env(args):
     args.n_agents = 2  # agent number
     args.obs_shape = [8, 8]  # obs dim
     args.action_shape = [1,1] # act dim
-    # args.action_shape = [2,2]
+    # highway env
+    # args.obs_shape = 20 
+    # args.action_shape = 1
     args.action_dim = [5,5] # act num for discrete action
     args.terminal_shape = [1,1] # terminal dim
     args.high_action = 1  # act high for continuous action
