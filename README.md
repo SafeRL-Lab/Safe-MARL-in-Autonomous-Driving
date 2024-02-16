@@ -80,7 +80,7 @@ python main_bilevel.py --file-path ./merge_env_result/exp2
 
 ## Citation
 ``` Bash
-@misc{highway-env,
+@misc{safemarl2023bilevel,
   author = {Zheng, Zhi and Gu, Shangding},
   title = {Safe Multi-Agent Reinforcement Learning with Bi-level Optimization in Autonomous Driving},
   year = {2023},
