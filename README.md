@@ -23,7 +23,7 @@ python main_bilevel.py --file-path ./merge_env_result/exp2
 ```
 
 ## 3. Demos
-### 3.1 highway environment
+### 3.1 Highway environment
 <p align="center">
     <img src="img/highway_env/highway_csmaddpg_1.gif" alt="animated" />
     <img src="img/highway_env/highway_csmaddpg_2.gif" alt="animated" />
