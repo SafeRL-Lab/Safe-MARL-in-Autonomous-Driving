@@ -1,4 +1,4 @@
-# Constrained Stackelberg Q-learning and MADDPG
+# Safe MARL in Autonomous Driving
 
 This is a pytorch implementation of Constrained Stackelberg Q-learning(discrete action) and Constrained Stackelberg MADDPG(continuous action). These algorithms are proposed by incorporating the Stackelberg model into Deep Q-learning and MADDPG, and leveraging the Lagrangian multiplier method to deal with the safety constraints. The highway environments used in our experiments are modified from [highway-env](https://github.com/Farama-Foundation/HighwayEnv).
 
@@ -96,17 +96,7 @@ python main_bilevel.py --file-path ./merge_env_result/exp2
 | ----------------------------------- | 
 |![Alt text](img/racetrack_env/crash_racetrack_sum.png) |
 
-## Citation
-``` Bash
-@misc{safemarl2023bilevel,
-  author = {Zheng, Zhi and Gu, Shangding},
-  title = {Safe Multi-Agent Reinforcement Learning with Bi-level Optimization in Autonomous Driving},
-  year = {2023},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/SafeRL-Lab/Safe-MARL-in-Autonomous-Driving}},
-}
-```
+
 
 
 
