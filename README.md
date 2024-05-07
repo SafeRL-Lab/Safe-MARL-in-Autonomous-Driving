@@ -98,6 +98,7 @@ python main_bilevel.py --file-path ./merge_env_result/exp2
 
 
 ## Citation
+If you find the repository useful, please cite the study
 ``` Bash
 @misc{safemarl2023bilevel,
 author = {Zheng, Zhi and Gu, Shangding},
