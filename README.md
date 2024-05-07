@@ -97,6 +97,17 @@ python main_bilevel.py --file-path ./merge_env_result/exp2
 |![Alt text](img/racetrack_env/crash_racetrack_sum.png) |
 
 
+## Citation
+``` Bash
+@misc{safemarl2023bilevel,
+author = {Zheng, Zhi and Gu, Shangding},
+title = {Safe Multi-Agent Reinforcement Learning with Bi-level Optimization in Autonomous Driving},
+year = {2023},
+publisher = {GitHub},
+journal = {GitHub repository},
+howpublished = {\url{https://github.com/SafeRL-Lab/Safe-MARL-in-Autonomous-Driving}},
+}
+```
 
 
 
