@@ -100,13 +100,11 @@ python main_bilevel.py --file-path ./merge_env_result/exp2
 ## Citation
 If you find the repository useful, please cite the study
 ``` Bash
-@misc{safemarl2023bilevel,
-author = {Zheng, Zhi and Gu, Shangding},
-title = {Safe Multi-Agent Reinforcement Learning with Bi-level Optimization in Autonomous Driving},
-year = {2023},
-publisher = {GitHub},
-journal = {GitHub repository},
-howpublished = {\url{https://github.com/SafeRL-Lab/Safe-MARL-in-Autonomous-Driving}},
+@article{zheng2024safe,
+  title={Safe Multi-Agent Reinforcement Learning with Bilevel Optimization in Autonomous Driving},
+  author={Zheng, Zhi and Gu, Shangding},
+  journal={arXiv preprint arXiv:2405.18209},
+  year={2024}
 }
 ```
 
