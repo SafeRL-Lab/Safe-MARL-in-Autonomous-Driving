@@ -103,7 +103,7 @@ If you find the repository useful, please cite the study
 @article{zheng2024safe,
   title={Safe Multi-Agent Reinforcement Learning with Bilevel Optimization in Autonomous Driving},
   author={Zheng, Zhi and Gu, Shangding},
-  journal={arXiv preprint arXiv:2405.18209},
+  journal={IEEE Transactions on Artificial Intelligence},
   year={2024}
 }
 ```
