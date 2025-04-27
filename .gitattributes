@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+# * text=auto
+
+*.py linguist-language=Python
+docs/* linguist-vendored
+assets/* linguist-vendored
+
